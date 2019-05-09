@@ -1,7 +1,8 @@
 f = open("vehicle.txt", "w")
 
 #Program Description
-"""Car Sales Program. User chooses the car and
+""" Program created by Broghan Fields
+    Car Sales Program. User chooses the car and
     specifications. Program returns the price
     of the car. """
 
@@ -21,7 +22,7 @@ def printCarEngineOptions():
   print("  2    | 4 Cylinder Hybrid  |  $5,000  ")
   print("  3    | 4 Cylinder Electric|  $6,000  ")
   print("  4    |     6 Cylinder     |  $7,000  ")
-  print("  5    |  6 Cylinder Hybrid | $10,000  ") 
+  print("  5    |  6 Cylinder Hybrid | $10,000  ")
   print("  6    |     8 Cylinder     | $13,000  ")
 
 #car options
@@ -64,11 +65,11 @@ def extrasLux():
     extra1 = extra1.lower()
     if extra1 == "y" or extra1 == "n":
       break
-    
+
 #totals function and receipt
 def figureCarTotal(car, carEngine,carEnginePrice, carEngineChoice,carPrice,total):
   luxury = 0
-  warranty = 0 
+  warranty = 0
   print("You have chosen a", car, "car with a", carEngine, "engine for", '${:,.2f}'.format(total))
   luxury = extrasLux()
   warranty = extrasExtWarr()
@@ -105,14 +106,14 @@ def chooseCar():
     f.write(str(carPrice))
     carEngine = ""
     carEnginePrice = 0
-    total = carPrice 
+    total = carPrice
     f.write(str(total))
     print("\nYou chose a", car, " for ", '${:,.2f}'.format(total))
     print("The engine options for a ",car, " are listed below\n")
     printCarEngineOptions()
     print("Would you like to add an engine option? ")
     carEngineChoice = input("Enter 1, 2, 3, 4, 5, or 6. ")
-    if carEngineChoice == "1":  
+    if carEngineChoice == "1":
       carEngine = "4 Cylinder"
       f.write(carEngine)
       carEnginePrice = 0
@@ -149,7 +150,7 @@ def chooseCar():
       carEnginePrice = 13000
       total = total + carEnginePrice
       f.write(str(total))
-    
+
     figureCarTotal(car, carEngine, carEnginePrice, carEngineChoice, carPrice, total)
 
 
@@ -160,7 +161,7 @@ def chooseCar():
     f.write(str(carPrice))
     carEngine = ""
     carEnginePrice = 0
-    total = carPrice 
+    total = carPrice
     f.write(str(total))
     print("\nYou chose a", car, " for ", '${:,.2f}'.format(total))
     print("The engine options for a ",car, " are listed below\n")
@@ -218,7 +219,7 @@ def chooseCar():
     f.write(str(carPrice))
     carEngine = ""
     carEnginePrice = 0
-    total = carPrice 
+    total = carPrice
     f.write(str(total))
     print("\nYou chose a", car, " for ", '${:,.2f}'.format(total))
     print("The engine options for a ",car, " are listed below\n")
@@ -275,7 +276,7 @@ def chooseCar():
     f.write(str(carPrice))
     carEngine = ""
     carEnginePrice = 0
-    total = carPrice 
+    total = carPrice
     f.write(str(total))
     print("\nYou chose a", car, " for ", '${:,.2f}'.format(total))
     print("The engine options for a ",car, " are listed below\n")
@@ -333,7 +334,7 @@ def chooseCar():
     f.write(str(carPrice))
     carEngine = ""
     carEnginePrice = 0
-    total = carPrice 
+    total = carPrice
     f.write(str(total))
     print("\nYou chose a", car, " for ", '${:,.2f}'.format(total))
     print("The engine options for a ",car, " are listed below\n")
@@ -362,8 +363,7 @@ def chooseCar():
       total= total + carEnginePrice
       f.write(str(total))
     figureCarTotal(car, carEngine, carEnginePrice, carEngineChoice, carPrice, total)
-   
-    
+
   #loop program option
   changeOrder = input("Would you like to order another car? (y)/(n) \n")
   changeOrder = changeOrder.lower()
@@ -371,7 +371,7 @@ def chooseCar():
     print("Thanks for stopping by!")
   else:
     chooseCar()
-    
+
   #close file
   f.close()
 
