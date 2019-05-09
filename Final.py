@@ -65,7 +65,7 @@ def extrasLux():
     if extra1 == "y" or extra1 == "n":
       break
     
-#function that figures the car/truck total and prints a summary of the order
+#totals function and receipt
 def figureCarTotal(car, carEngine,carEnginePrice, carEngineChoice,carPrice,total):
   luxury = 0
   warranty = 0 
